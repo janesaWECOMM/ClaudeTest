@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Prompt Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Prompt Optimizer</h1>
+            <p class="subtitle">Transform your basic ideas into powerful image generation prompts</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="basePrompt">Your Idea</label>
+                    <textarea id="basePrompt" placeholder="Describe what you want to create... (e.g., 'a cat sitting on a windowsill')"></textarea>
+                </div>
+
+                <div class="options-grid">
+                    <div class="form-group">
+                        <label for="artStyle">Art Style</label>
+                        <select id="artStyle">
+                            <option value="">-- Select Style --</option>
+                            <option value="photorealistic">Photorealistic</option>
+                            <option value="digital art">Digital Art</option>
+                            <option value="oil painting">Oil Painting</option>
+                            <option value="watercolor">Watercolor</option>
+                            <option value="anime">Anime</option>
+                            <option value="3D render">3D Render</option>
+                            <option value="pencil sketch">Pencil Sketch</option>
+                            <option value="comic book style">Comic Book</option>
+                            <option value="pixel art">Pixel Art</option>
+                            <option value="surrealist">Surrealist</option>
+                            <option value="impressionist">Impressionist</option>
+                            <option value="minimalist">Minimalist</option>
+                            <option value="cyberpunk">Cyberpunk</option>
+                            <option value="fantasy art">Fantasy Art</option>
+                            <option value="concept art">Concept Art</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lighting">Lighting</label>
+                        <select id="lighting">
+                            <option value="">-- Select Lighting --</option>
+                            <option value="natural lighting">Natural Light</option>
+                            <option value="golden hour">Golden Hour</option>
+                            <option value="dramatic lighting">Dramatic</option>
+                            <option value="soft diffused light">Soft Diffused</option>
+                            <option value="neon lighting">Neon</option>
+                            <option value="cinematic lighting">Cinematic</option>
+                            <option value="studio lighting">Studio</option>
+                            <option value="backlit">Backlit</option>
+                            <option value="moonlight">Moonlight</option>
+                            <option value="volumetric lighting">Volumetric</option>
+                            <option value="rim lighting">Rim Lighting</option>
+                            <option value="bioluminescent">Bioluminescent</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mood">Mood / Atmosphere</label>
+                        <select id="mood">
+                            <option value="">-- Select Mood --</option>
+                            <option value="peaceful and serene">Peaceful</option>
+                            <option value="mysterious and dark">Mysterious</option>
+                            <option value="vibrant and energetic">Vibrant</option>
+                            <option value="melancholic">Melancholic</option>
+                            <option value="dreamy and ethereal">Dreamy</option>
+                            <option value="epic and grand">Epic</option>
+                            <option value="cozy and warm">Cozy</option>
+                            <option value="tense and suspenseful">Tense</option>
+                            <option value="whimsical and playful">Whimsical</option>
+                            <option value="nostalgic">Nostalgic</option>
+                            <option value="futuristic">Futuristic</option>
+                            <option value="romantic">Romantic</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="camera">Camera / Perspective</label>
+                        <select id="camera">
+                            <option value="">-- Select Perspective --</option>
+                            <option value="close-up shot">Close-up</option>
+                            <option value="wide angle shot">Wide Angle</option>
+                            <option value="bird's eye view">Bird's Eye View</option>
+                            <option value="low angle shot">Low Angle</option>
+                            <option value="portrait shot">Portrait</option>
+                            <option value="macro photography">Macro</option>
+                            <option value="aerial view">Aerial View</option>
+                            <option value="first person perspective">First Person</option>
+                            <option value="isometric view">Isometric</option>
+                            <option value="panoramic view">Panoramic</option>
+                            <option value="Dutch angle">Dutch Angle</option>
+                            <option value="extreme close-up">Extreme Close-up</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="colorPalette">Color Palette</label>
+                        <select id="colorPalette">
+                            <option value="">-- Select Colors --</option>
+                            <option value="vibrant colors">Vibrant</option>
+                            <option value="muted colors">Muted</option>
+                            <option value="pastel colors">Pastel</option>
+                            <option value="monochromatic">Monochromatic</option>
+                            <option value="warm colors">Warm Tones</option>
+                            <option value="cool colors">Cool Tones</option>
+                            <option value="high contrast">High Contrast</option>
+                            <option value="earth tones">Earth Tones</option>
+                            <option value="neon colors">Neon</option>
+                            <option value="black and white">Black & White</option>
+                            <option value="sepia tones">Sepia</option>
+                            <option value="complementary colors">Complementary</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detail">Detail Level</label>
+                        <select id="detail">
+                            <option value="">-- Select Detail --</option>
+                            <option value="highly detailed">Highly Detailed</option>
+                            <option value="intricate details">Intricate</option>
+                            <option value="ultra detailed, 8k">Ultra HD (8K)</option>
+                            <option value="simple and clean">Simple & Clean</option>
+                            <option value="hyperrealistic details">Hyperrealistic</option>
+                            <option value="elaborate ornate details">Ornate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artist">Artist Inspiration</label>
+                        <select id="artist">
+                            <option value="">-- Select Artist --</option>
+                            <option value="in the style of Studio Ghibli">Studio Ghibli</option>
+                            <option value="in the style of Greg Rutkowski">Greg Rutkowski</option>
+                            <option value="in the style of Alphonse Mucha">Alphonse Mucha</option>
+                            <option value="in the style of Moebius">Moebius</option>
+                            <option value="in the style of James Gurney">James Gurney</option>
+                            <option value="in the style of Artgerm">Artgerm</option>
+                            <option value="in the style of Wes Anderson">Wes Anderson</option>
+                            <option value="in the style of HR Giger">HR Giger</option>
+                            <option value="in the style of Hayao Miyazaki">Hayao Miyazaki</option>
+                            <option value="in the style of Makoto Shinkai">Makoto Shinkai</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quality">Quality Boosters</label>
+                        <select id="quality">
+                            <option value="">-- Select Quality --</option>
+                            <option value="masterpiece, best quality">Masterpiece</option>
+                            <option value="award winning">Award Winning</option>
+                            <option value="trending on artstation">Trending on ArtStation</option>
+                            <option value="professionally shot">Professional</option>
+                            <option value="sharp focus, high resolution">Sharp & High-Res</option>
+                            <option value="octane render">Octane Render</option>
+                            <option value="unreal engine 5">Unreal Engine 5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="customAdditions">Custom Additions</label>
+                    <input type="text" id="customAdditions" placeholder="Add any custom keywords or details...">
+                </div>
+
+                <div class="form-group">
+                    <label for="negativePrompt">Negative Prompt (what to avoid)</label>
+                    <input type="text" id="negativePrompt" placeholder="e.g., blurry, low quality, watermark...">
+                </div>
+
+                <div class="button-group">
+                    <button id="generateBtn" class="btn-primary">Generate Optimized Prompt</button>
+                    <button id="randomBtn" class="btn-secondary">Surprise Me</button>
+                    <button id="clearBtn" class="btn-secondary">Clear All</button>
+                </div>
+            </section>
+
+            <section class="output-section">
+                <div class="output-header">
+                    <h2>Your Optimized Prompt</h2>
+                    <button id="copyBtn" class="btn-copy" disabled>Copy to Clipboard</button>
+                </div>
+                <div id="outputPrompt" class="output-box">
+                    <p class="placeholder-text">Your optimized prompt will appear here...</p>
+                </div>
+
+                <div class="negative-output" id="negativeOutput" style="display: none;">
+                    <div class="output-header">
+                        <h3>Negative Prompt</h3>
+                        <button id="copyNegativeBtn" class="btn-copy">Copy</button>
+                    </div>
+                    <div id="negativePromptOutput" class="output-box small"></div>
+                </div>
+            </section>
+
+            <section class="tips-section">
+                <h2>Prompt Writing Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>Be Specific</h3>
+                        <p>Instead of "a dog", try "a golden retriever puppy with fluffy fur playing in autumn leaves"</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Describe the Scene</h3>
+                        <p>Include environment details like "in a cozy coffee shop" or "on a misty mountain peak at dawn"</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Specify the Medium</h3>
+                        <p>Define the art style: "oil painting", "digital illustration", "35mm photograph", "anime style"</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Add Technical Details</h3>
+                        <p>Include camera settings, lighting conditions, or render engine for more control</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Use Weights</h3>
+                        <p>Some generators support weighting like (important:1.5) to emphasize certain elements</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Negative Prompts Help</h3>
+                        <p>Tell the AI what to avoid: "no blur, no watermarks, no extra limbs, no distortion"</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="examples-section">
+                <h2>Example Prompts</h2>
+                <div class="examples-list">
+                    <div class="example-card" data-prompt="A majestic dragon perched on a crystal cliff, scales shimmering with iridescent colors, overlooking a vast fantasy kingdom at sunset, volumetric lighting, highly detailed, digital art, epic and grand atmosphere, warm golden tones, concept art, trending on artstation">
+                        <h4>Fantasy Dragon</h4>
+                        <p>A majestic dragon perched on a crystal cliff, scales shimmering with iridescent colors...</p>
+                        <button class="btn-use">Use This</button>
+                    </div>
+                    <div class="example-card" data-prompt="Cozy Japanese cafe interior on a rainy evening, warm amber lighting from paper lanterns, steam rising from a cup of matcha, rain droplets on the window, anime style, in the style of Makoto Shinkai, peaceful and serene mood, soft diffused light, highly detailed">
+                        <h4>Cozy Anime Cafe</h4>
+                        <p>Cozy Japanese cafe interior on a rainy evening, warm amber lighting from paper lanterns...</p>
+                        <button class="btn-use">Use This</button>
+                    </div>
+                    <div class="example-card" data-prompt="Futuristic cyberpunk street market at night, neon signs in multiple languages, holographic advertisements, diverse crowd of humans and androids, rain-slicked streets reflecting colorful lights, cinematic lighting, 8k ultra detailed, blade runner atmosphere, wide angle shot">
+                        <h4>Cyberpunk Market</h4>
+                        <p>Futuristic cyberpunk street market at night, neon signs in multiple languages...</p>
+                        <button class="btn-use">Use This</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Image Prompt Optimizer - Create better prompts for AI image generators</p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
