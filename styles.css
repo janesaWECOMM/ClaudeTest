@@ -153,6 +153,76 @@ select option {
     padding: 0.5rem;
 }
 
+/* Model Selector */
+.model-selector-container {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.model-selector-container .form-group {
+    margin-bottom: 1rem;
+}
+
+.model-select {
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-color: var(--primary-color);
+}
+
+.model-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-input);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.model-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    background: var(--primary-color);
+    color: white;
+}
+
+.model-badge.midjourney {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+}
+
+.model-badge.chatgpt {
+    background: linear-gradient(135deg, #10a37f, #0d8c6d);
+}
+
+.model-badge.ideogram {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.model-badge.veo {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+}
+
+.model-badge.nanobananapro {
+    background: linear-gradient(135deg, #ffe135, #f5c800);
+    color: #1a1a2e;
+}
+
+.model-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
 /* Options Grid */
 .options-grid {
     display: grid;
@@ -266,6 +336,29 @@ button {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid var(--border-color);
+}
+
+/* Model indicator in output */
+.model-indicator {
+    margin-bottom: 0.75rem;
+}
+
+.model-tip {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.model-tip p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.model-tip strong {
+    color: var(--primary-color);
 }
 
 /* Tips Section */

@@ -15,6 +15,24 @@
 
         <main>
             <section class="input-section">
+                <div class="model-selector-container">
+                    <div class="form-group">
+                        <label for="modelSelect">Target Model</label>
+                        <select id="modelSelect" class="model-select">
+                            <option value="general">General (Works with any model)</option>
+                            <option value="midjourney">Midjourney</option>
+                            <option value="chatgpt">ChatGPT Images (DALL-E)</option>
+                            <option value="ideogram">Ideogram</option>
+                            <option value="veo">Veo (Google)</option>
+                            <option value="nanobananapro">Nano Banana Pro</option>
+                        </select>
+                    </div>
+                    <div id="modelInfo" class="model-info">
+                        <span class="model-badge">General</span>
+                        <p>Standard prompt format compatible with most image generators.</p>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="basePrompt">Your Idea</label>
                     <textarea id="basePrompt" placeholder="Describe what you want to create... (e.g., 'a cat sitting on a windowsill')"></textarea>
